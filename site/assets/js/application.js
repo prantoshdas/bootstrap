@@ -28,15 +28,6 @@
       new bootstrap.Popover(popover)
     })
 
-  document.querySelectorAll('.toast')
-    .forEach(function (toastNode) {
-      var toast = new bootstrap.Toast(toastNode, {
-        autohide: false
-      })
-
-      toast.show()
-    })
-
   // Demos within modals
   document.querySelectorAll('.tooltip-test')
     .forEach(function (tooltip) {
@@ -61,6 +52,27 @@
         e.preventDefault()
       })
     })
+
+  // Position toast
+  var selectToastPlacement = document.getElementById('selectToastPlacement')
+  if (selectToastPlacement) {
+    selectToastPlacement.addEventListener('change', function () {
+      document.querySelectorAll('.toast-placement')
+        .forEach(function (toastEl) {
+          var toast = bootstrap.Toast.getInstance(toastEl)
+
+          if (toast) {
+            toast.config.position = selectToastPlacement.value
+          } else {
+            toast = new bootstrap.Toast(toastEl, {
+              position: selectToastPlacement.value
+            })
+          }
+
+          toast.show()
+        })
+    })
+  }
 
   // Modal relatedTarget demo
   var exampleModal = document.getElementById('exampleModal')
