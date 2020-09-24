@@ -117,7 +117,7 @@
     "@rollup/plugin-node-resolve": "^9.0.0",
     "autoprefixer": "^9.8.6",
     "babel-plugin-istanbul": "^6.0.0",
-    "bundlewatch": "^0.3.0",
+    "bundlewatch": "^0.3.1",
     "clean-css-cli": "^4.3.0",
     "cross-env": "^7.0.2",
     "eslint": "^7.9.0",
@@ -149,7 +149,7 @@
     "shelljs": "^0.8.4",
     "shx": "^0.3.2",
     "sinon": "^7.5.0",
-    "stylelint": "^13.6.1",
+    "stylelint": "13.6.1",
     "stylelint-config-twbs-bootstrap": "^2.1.0",
     "terser": "^4.8.0",
     "vnu-jar": "20.6.30"
